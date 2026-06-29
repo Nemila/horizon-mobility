@@ -12,42 +12,42 @@ const destinations = [
   {
     name: "Canada",
     flag: "🇨🇦",
-    image: `https://images.unsplash.com/photo-1519832979-6b66735edc567?${imageParams}`,
+    image: `/countries/canada.jpeg`,
   },
   {
     name: "France",
     flag: "🇫🇷",
-    image: `https://images.unsplash.com/photo-1502602898657-3e91760cbb34?${imageParams}`,
+    image: `/countries/france.jpeg`,
   },
   {
     name: "Royaume-Uni",
     flag: "🇬🇧",
-    image: `https://images.unsplash.com/photo-1513635269975-59663e0ac968?${imageParams}`,
+    image: `/countries/uk.jpeg`,
   },
   {
     name: "États-Unis",
     flag: "🇺🇸",
-    image: `https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?${imageParams}`,
+    image: `/countries/usa.jpeg`,
   },
   {
     name: "Turquie",
     flag: "🇹🇷",
-    image: `https://images.unsplash.com/photo-1623621534850-d325a1980c7e?${imageParams}`,
+    image: `/countries/turquie.jpeg`,
   },
   {
     name: "Allemagne",
     flag: "🇩🇪",
-    image: `https://images.unsplash.com/photo-1467269204594-9661b134dd2b?${imageParams}`,
+    image: `/countries/allemagne.jpeg`,
   },
   {
     name: "Espagne",
     flag: "🇪🇸",
-    image: `https://images.unsplash.com/photo-1543783207-ec64e4d95325?${imageParams}`,
+    image: `/countries/espagne.jpeg`,
   },
   {
     name: "Belgique",
     flag: "🇧🇪",
-    image: `https://images.unsplash.com/photo-1558618666-fcd25c85cd64?${imageParams}`,
+    image: `/countries/belgium.jpeg`,
   },
 ];
 
@@ -69,7 +69,7 @@ function DestinationCard({
   destination: (typeof destinations)[number];
 }) {
   return (
-    <article className="group relative aspect-[16/10] w-72 shrink-0 transition-transform duration-300 hover:scale-[1.02] sm:w-80 lg:w-96">
+    <article className="group relative aspect-16/10 w-72 shrink-0 transition-transform duration-300 hover:scale-[1.02] sm:w-80 lg:w-96">
       <div className="relative h-full w-full overflow-hidden rounded-[22px] border border-border shadow-card">
         <Image
           src={destination.image}

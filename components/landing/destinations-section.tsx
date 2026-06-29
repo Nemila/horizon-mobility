@@ -1,5 +1,3 @@
-import { ArrowRight } from "lucide-react";
-
 import {
   Container,
   Highlight,
@@ -7,7 +5,6 @@ import {
   SectionTitle,
 } from "@/components/landing/container";
 import { DestinationsRows } from "@/components/landing/destinations-rows";
-import { Button } from "@/components/ui/button";
 
 export function DestinationsSection() {
   return (
@@ -19,13 +16,6 @@ export function DestinationsSection() {
       </Container>
 
       <DestinationsRows />
-
-      <Container className="mt-8 flex justify-center lg:mt-10">
-        <Button variant="outline" size="lg" className="bg-white shadow-card">
-          Voir toutes les destinations
-          <ArrowRight className="size-4" />
-        </Button>
-      </Container>
     </Section>
   );
 }
