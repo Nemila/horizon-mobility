@@ -35,22 +35,23 @@ const clientAvatars = [
 
 export function HeroStatsCard() {
   const prefersReducedMotion = useReducedMotion();
+  const shouldAnimate = prefersReducedMotion !== true;
 
   return (
     <motion.div
       className="rounded-[1.25rem] border border-border bg-white p-4"
-      initial={false}
-      animate={prefersReducedMotion ? { y: 0 } : { y: [0, -28, 0] }}
+      initial={{ y: 0 }}
+      animate={shouldAnimate ? { y: -28 } : { y: 0 }}
       transition={
-        prefersReducedMotion
-          ? undefined
-          : {
+        shouldAnimate
+          ? {
               duration: 1.75,
-              ease: [0.45, 0.05, 0.55, 0.95],
+              ease: "easeInOut",
               repeat: Infinity,
+              repeatType: "reverse",
             }
+          : { duration: 0 }
       }
-      style={{ willChange: "transform" }}
     >
       <div className="mb-2 flex size-9 items-center justify-center rounded-full border border-border text-primary">
         <Users className="size-4" strokeWidth={1.5} />
