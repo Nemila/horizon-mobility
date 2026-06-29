@@ -40,15 +40,14 @@ export function HeroStatsCard() {
     <motion.div
       className="rounded-[1.25rem] border border-border bg-white p-4 shadow-card"
       initial={false}
-      animate={prefersReducedMotion ? { y: 0 } : { y: -44 }}
+      animate={prefersReducedMotion ? { y: 0 } : { y: [0, -28, 0] }}
       transition={
         prefersReducedMotion
           ? undefined
           : {
-              duration: 1.25,
-              ease: [0.45, 0, 0.55, 1],
+              duration: 1.75,
+              ease: [0.45, 0.05, 0.55, 0.95],
               repeat: Infinity,
-              repeatType: "reverse",
             }
       }
       style={{ willChange: "transform" }}

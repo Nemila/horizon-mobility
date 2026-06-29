@@ -1,3 +1,6 @@
+"use client"
+
+import { motion, useReducedMotion } from "framer-motion"
 import { Award, Globe2, Smile, Target } from "lucide-react"
 
 import {
@@ -50,9 +53,11 @@ function MosaicImageGrid({
   alt: string
   className?: string
 }) {
+  const prefersReducedMotion = useReducedMotion()
   const tiles = Array.from({ length: cols * rows }, (_, index) => ({
     col: index % cols,
     row: Math.floor(index / cols),
+    index,
   }))
 
   return (
@@ -62,17 +67,33 @@ function MosaicImageGrid({
       role="img"
       aria-label={alt}
     >
-      {tiles.map(({ col, row }) => (
+      {tiles.map(({ col, row, index }) => (
         <div
           key={`${col}-${row}`}
-          className="aspect-square overflow-hidden rounded-2xl sm:rounded-[1.125rem]"
-          style={{
-            backgroundImage: `url(${src})`,
-            backgroundSize: `${cols * 100}% ${rows * 100}%`,
-            backgroundPosition: `${cols > 1 ? (col / (cols - 1)) * 100 : 0}% ${rows > 1 ? (row / (rows - 1)) * 100 : 0}%`,
-            backgroundRepeat: "no-repeat",
-          }}
-        />
+          className="group relative aspect-square overflow-hidden rounded-2xl transition-all duration-300 ease-out hover:z-10 hover:scale-105 hover:rotate-2 hover:shadow-card sm:rounded-[1.125rem]"
+        >
+          <motion.div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url(${src})`,
+              backgroundSize: `${cols * 100}% ${rows * 100}%`,
+              backgroundPosition: `${cols > 1 ? (col / (cols - 1)) * 100 : 0}% ${rows > 1 ? (row / (rows - 1)) * 100 : 0}%`,
+              backgroundRepeat: "no-repeat",
+            }}
+            initial={{ filter: "grayscale(1)" }}
+            whileInView={{ filter: "grayscale(0)" }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{
+              filter: prefersReducedMotion
+                ? { duration: 0 }
+                : {
+                    duration: 0.6,
+                    delay: index * 0.04,
+                    ease: "easeOut",
+                  },
+            }}
+          />
+        </div>
       ))}
     </div>
   )
