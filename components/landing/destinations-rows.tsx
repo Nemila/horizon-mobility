@@ -70,7 +70,7 @@ function DestinationCard({
 }) {
   return (
     <article className="group relative aspect-16/10 w-72 shrink-0 transition-transform duration-300 hover:scale-[1.02] sm:w-80 lg:w-96">
-      <div className="relative h-full w-full overflow-hidden rounded-[22px] border border-border shadow-card">
+      <div className="relative h-full w-full overflow-hidden rounded-[22px] border border-border">
         <Image
           src={destination.image}
           alt={destination.name}

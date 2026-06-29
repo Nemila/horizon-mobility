@@ -53,7 +53,7 @@ export function TeamSection() {
               <Button
                 variant="outline"
                 size="lg"
-                className="bg-white shadow-card"
+                className="bg-white"
               >
                 Rencontrer l&apos;équipe
                 <ArrowRight className="size-4" />
@@ -65,7 +65,7 @@ export function TeamSection() {
             {team.map((member) => (
               <article
                 key={member.name}
-                className="overflow-hidden rounded-[28px] border border-border bg-white p-5 shadow-card"
+                className="overflow-hidden rounded-[28px] border border-border bg-white p-5"
               >
                 <div
                   className={`mb-4 aspect-square rounded-[20px] bg-gradient-to-br ${member.color}`}

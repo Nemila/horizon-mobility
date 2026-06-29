@@ -72,7 +72,7 @@ export function ContactSection() {
             </div>
           </div>
 
-          <form className="rounded-[28px] border border-border bg-white p-6 shadow-card lg:p-8">
+          <form className="rounded-[28px] border border-border bg-white p-6 lg:p-8">
             <div className="grid gap-4 sm:grid-cols-2">
               <Input placeholder="Nom complet" aria-label="Nom complet" />
               <Input
@@ -94,7 +94,7 @@ export function ContactSection() {
             </Button>
           </form>
 
-          <div className="relative min-h-[420px] overflow-hidden rounded-[28px] border border-border bg-gradient-to-br from-[#dbeafe] via-[#e8edf5] to-[#fed7aa]/30 shadow-card">
+          <div className="relative min-h-[420px] overflow-hidden rounded-[28px] border border-border bg-gradient-to-br from-[#dbeafe] via-[#e8edf5] to-[#fed7aa]/30">
             <div className="absolute inset-0 opacity-30">
               <div className="grid h-full w-full grid-cols-6 grid-rows-6">
                 {Array.from({ length: 36 }).map((_, i) => (
@@ -105,7 +105,7 @@ export function ContactSection() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <MapPin className="size-10 fill-accent text-accent" />
             </div>
-            <div className="absolute right-4 bottom-4 left-4 rounded-2xl border border-border bg-white p-4 shadow-card sm:left-auto sm:max-w-xs">
+            <div className="absolute right-4 bottom-4 left-4 rounded-2xl border border-border bg-white p-4 sm:left-auto sm:max-w-xs">
               <p className="text-sm font-semibold text-primary">
                 Horizon Mobility
               </p>

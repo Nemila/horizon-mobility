@@ -59,7 +59,7 @@ export function ServicesSection() {
           {services.map((service) => (
             <article
               key={service.title}
-              className="group relative flex flex-col overflow-hidden rounded-[28px] border border-border bg-white shadow-card md:min-h-[320px] md:flex-row"
+              className="group relative flex flex-col overflow-hidden rounded-[28px] border border-border bg-white md:min-h-[320px] md:flex-row"
             >
               <div className="relative flex flex-1 flex-col p-8 text-left lg:p-10">
                 <div

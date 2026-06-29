@@ -70,7 +70,7 @@ function MosaicImageGrid({
       {tiles.map(({ col, row, index }) => (
         <div
           key={`${col}-${row}`}
-          className="group relative aspect-square overflow-hidden rounded-2xl transition-all duration-300 ease-out hover:z-10 hover:scale-105 hover:rotate-2 hover:shadow-card sm:rounded-[1.125rem]"
+          className="group relative aspect-square overflow-hidden rounded-2xl transition-all duration-300 ease-out hover:z-10 hover:scale-105 hover:rotate-2 sm:rounded-[1.125rem]"
         >
           <motion.div
             className="absolute inset-0"
@@ -131,7 +131,7 @@ export function StatsBar() {
               {stats.map((stat) => (
                 <article
                   key={stat.label}
-                  className="flex flex-col gap-3 rounded-[22px] border border-border bg-white p-4 shadow-card sm:gap-4 sm:p-5"
+                  className="flex flex-col gap-3 rounded-[22px] border border-border bg-white p-4 sm:gap-4 sm:p-5"
                 >
                   <div className="flex size-11 items-center justify-center rounded-2xl border border-border text-primary sm:size-12">
                     <stat.icon className="size-5" strokeWidth={1.5} />

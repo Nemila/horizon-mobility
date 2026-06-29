@@ -45,7 +45,7 @@ export function TestimonialsSection() {
           {testimonials.map((testimonial) => (
             <article
               key={testimonial.name}
-              className="flex flex-col rounded-[28px] border border-border bg-white p-8 shadow-card"
+              className="flex flex-col rounded-[28px] border border-border bg-white p-8"
             >
               <Quote
                 className="mb-6 size-10 text-muted-foreground/40"

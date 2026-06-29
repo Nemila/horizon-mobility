@@ -38,7 +38,7 @@ export function HeroStatsCard() {
 
   return (
     <motion.div
-      className="rounded-[1.25rem] border border-border bg-white p-4 shadow-card"
+      className="rounded-[1.25rem] border border-border bg-white p-4"
       initial={false}
       animate={prefersReducedMotion ? { y: 0 } : { y: [0, -28, 0] }}
       transition={

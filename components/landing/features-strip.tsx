@@ -67,7 +67,7 @@ export function FeaturesStrip() {
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className="group relative flex h-full flex-col justify-center overflow-hidden rounded-[22px] border border-border bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/15 hover:shadow-card lg:p-7"
+              className="group relative flex h-full flex-col justify-center overflow-hidden rounded-[22px] border border-border bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/15 lg:p-7"
             >
               <span
                 aria-hidden

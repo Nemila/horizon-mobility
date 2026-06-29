@@ -34,7 +34,7 @@ export function HeroSection() {
               </Button>
               <Button
                 variant="primary-outline"
-                className="border-border bg-white shadow-card hover:bg-white"
+                className="border-border bg-white hover:bg-white"
               >
                 <Calendar />
                 Prendre rendez-vous
