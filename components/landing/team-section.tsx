@@ -37,7 +37,7 @@ const team = [
 
 export function TeamSection() {
   return (
-    <Section id="apropos" className="pt-0">
+    <Section id="apropos" className="bg-section-alt pt-0">
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="flex flex-col gap-6">

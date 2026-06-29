@@ -37,7 +37,7 @@ export function HeroSection() {
   return (
     <section
       id="accueil"
-      className="py-10 lg:flex lg:min-h-[calc(100svh-6rem)] lg:items-center lg:py-6"
+      className="bg-background py-10 lg:flex lg:min-h-[calc(100svh-6rem)] lg:items-center lg:py-6"
     >
       <Container className="w-full">
         <div className="grid items-center gap-8 lg:grid-cols-[40fr_60fr] lg:gap-10">

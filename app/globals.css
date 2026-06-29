@@ -133,3 +133,7 @@
 @utility shadow-card {
   box-shadow: 0 12px 40px rgba(16, 40, 90, 0.06);
 }
+
+@utility bg-section-alt {
+  background-color: #f2f5fa;
+}

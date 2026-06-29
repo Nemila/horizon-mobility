@@ -27,7 +27,7 @@ const stats = [
 
 export function StatsBar() {
   return (
-    <section className="pb-24 lg:pb-[120px]">
+    <section className="bg-background pb-24 lg:pb-[120px]">
       <Container>
         <div className="grid gap-8 rounded-[28px] border border-border bg-white px-6 py-10 shadow-card sm:grid-cols-2 lg:grid-cols-4 lg:px-10 lg:py-12">
           {stats.map((stat) => (

@@ -27,7 +27,7 @@ function SocialIcon({
 
 export function ContactSection() {
   return (
-    <Section id="contact" className="pt-0">
+    <Section id="contact" className="bg-section-alt pt-0">
       <Container>
         <div className="grid gap-8 lg:grid-cols-3 lg:gap-10">
           <div className="flex flex-col gap-6 lg:gap-8">
