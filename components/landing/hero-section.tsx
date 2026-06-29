@@ -1,37 +1,9 @@
-import { ArrowRight, Calendar, Users } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 import Image from "next/image";
 
 import { Container, Highlight } from "@/components/landing/container";
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarGroup,
-  AvatarImage,
-} from "@/components/ui/avatar";
+import { HeroStatsCard } from "@/components/landing/hero-stats-card";
 import { Button } from "@/components/ui/button";
-
-const clientAvatars = [
-  {
-    src: "/avatars/client-1.jpg",
-    alt: "Cliente Horizon Mobility",
-    fallback: "A",
-  },
-  {
-    src: "/avatars/client-2.jpg",
-    alt: "Client Horizon Mobility",
-    fallback: "M",
-  },
-  {
-    src: "/avatars/client-3.jpg",
-    alt: "Cliente Horizon Mobility",
-    fallback: "S",
-  },
-  {
-    src: "/avatars/client-4.jpg",
-    alt: "Client Horizon Mobility",
-    fallback: "F",
-  },
-];
 
 export function HeroSection() {
   return (
@@ -77,31 +49,14 @@ export function HeroSection() {
                 alt="Voyageur Horizon Mobility avec passport devant Paris"
                 fill
                 priority
+                quality={100}
+                sizes="(max-width: 1024px) 100vw, 960px"
                 className="object-contain object-center"
               />
             </div>
 
-            <div className="absolute right-0 bottom-4 left-4 rounded-[1.25rem] border border-border bg-white p-4 shadow-card sm:right-4 sm:left-auto sm:max-w-xs">
-              <div className="mb-2 flex size-9 items-center justify-center rounded-full border border-border text-primary">
-                <Users className="size-4" strokeWidth={1.5} />
-              </div>
-              <p className="mb-3 text-sm leading-snug text-secondary-foreground">
-                Des milliers de clients accompagnés avec succès à travers le
-                monde.
-              </p>
-              <div className="flex items-center gap-3">
-                <AvatarGroup>
-                  {clientAvatars.map((client) => (
-                    <Avatar key={client.src} size="lg">
-                      <AvatarImage src={client.src} alt={client.alt} />
-                      <AvatarFallback>{client.fallback}</AvatarFallback>
-                    </Avatar>
-                  ))}
-                </AvatarGroup>
-                <span className="text-sm font-semibold text-primary">
-                  +2.5k
-                </span>
-              </div>
+            <div className="absolute right-0 bottom-4 left-4 sm:right-4 sm:left-auto sm:max-w-xs">
+              <HeroStatsCard />
             </div>
           </div>
         </div>
