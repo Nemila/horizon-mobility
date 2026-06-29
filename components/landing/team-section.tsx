@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -12,26 +13,26 @@ const team = [
   {
     name: "Aissata N.",
     role: "Conseillère en immigration",
-    initials: "AN",
-    color: "from-blue-100 to-primary/20",
+    image: "/team/aissata.jpg",
+    alt: "Aissata N., conseillère en immigration chez Horizon Mobility",
   },
   {
     name: "Ousmane D.",
     role: "Spécialiste visa & études",
-    initials: "OD",
-    color: "from-indigo-100 to-primary/20",
+    image: "/team/ousmane.jpg",
+    alt: "Ousmane D., spécialiste visa et études chez Horizon Mobility",
   },
   {
     name: "Mariam K.",
     role: "Conseillère en tourisme",
-    initials: "MK",
-    color: "from-orange-100 to-accent/20",
+    image: "/team/mariam.jpg",
+    alt: "Mariam K., conseillère en tourisme chez Horizon Mobility",
   },
   {
     name: "Yassine B.",
     role: "Responsable des opérations",
-    initials: "YB",
-    color: "from-slate-100 to-primary/10",
+    image: "/team/yassine.jpg",
+    alt: "Yassine B., responsable des opérations chez Horizon Mobility",
   },
 ]
 
@@ -39,8 +40,8 @@ export function TeamSection() {
   return (
     <Section id="apropos" className="bg-section-alt pt-0">
       <Container>
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-12 lg:gap-14">
+          <div className="mx-auto flex max-w-2xl flex-col gap-6 text-center">
             <SectionTitle>
               Des experts <Highlight>passionnés</Highlight>, à votre service.
             </SectionTitle>
@@ -50,26 +51,29 @@ export function TeamSection() {
               bienveillance à chaque étape de votre projet.
             </p>
             <div>
-              <Button
-                variant="outline"
-                size="lg"
-                className="bg-white"
-              >
+              <Button variant="outline" size="lg" className="bg-white">
                 Rencontrer l&apos;équipe
                 <ArrowRight className="size-4" />
               </Button>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 sm:gap-5">
+          <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
             {team.map((member) => (
               <article
                 key={member.name}
                 className="overflow-hidden rounded-[28px] border border-border bg-white p-5"
               >
-                <div
-                  className={`mb-4 aspect-square rounded-[20px] bg-gradient-to-br ${member.color}`}
-                />
+                <div className="relative mb-4 aspect-square overflow-hidden rounded-[20px]">
+                  <Image
+                    src={member.image}
+                    alt={member.alt}
+                    fill
+                    quality={100}
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                    className="object-cover"
+                  />
+                </div>
                 <h3 className="text-sm font-semibold text-primary">
                   {member.name}
                 </h3>
