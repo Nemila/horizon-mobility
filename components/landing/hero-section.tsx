@@ -2,7 +2,36 @@ import { ArrowRight, Calendar, Users } from "lucide-react";
 import Image from "next/image";
 
 import { Container, Highlight } from "@/components/landing/container";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarGroup,
+  AvatarImage,
+} from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+
+const clientAvatars = [
+  {
+    src: "/avatars/client-1.jpg",
+    alt: "Cliente Horizon Mobility",
+    fallback: "A",
+  },
+  {
+    src: "/avatars/client-2.jpg",
+    alt: "Client Horizon Mobility",
+    fallback: "M",
+  },
+  {
+    src: "/avatars/client-3.jpg",
+    alt: "Cliente Horizon Mobility",
+    fallback: "S",
+  },
+  {
+    src: "/avatars/client-4.jpg",
+    alt: "Client Horizon Mobility",
+    fallback: "F",
+  },
+];
 
 export function HeroSection() {
   return (
@@ -61,17 +90,14 @@ export function HeroSection() {
                 monde.
               </p>
               <div className="flex items-center gap-3">
-                <div className="flex -space-x-2">
-                  {["A", "M", "S", "F"].map((initial, i) => (
-                    <div
-                      key={initial}
-                      className="flex size-7 items-center justify-center rounded-full border-2 border-white bg-primary/10 text-[10px] font-semibold text-primary"
-                      style={{ zIndex: 4 - i }}
-                    >
-                      {initial}
-                    </div>
+                <AvatarGroup>
+                  {clientAvatars.map((client) => (
+                    <Avatar key={client.src} size="lg">
+                      <AvatarImage src={client.src} alt={client.alt} />
+                      <AvatarFallback>{client.fallback}</AvatarFallback>
+                    </Avatar>
                   ))}
-                </div>
+                </AvatarGroup>
                 <span className="text-sm font-semibold text-primary">
                   +2.5k
                 </span>
